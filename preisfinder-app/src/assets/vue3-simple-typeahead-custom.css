@@ -1,0 +1,44 @@
+
+.simple-typeahead {
+    position: relative;
+    width: 100%;
+}
+.simple-typeahead > input {
+    margin-bottom: 0;
+}
+.simple-typeahead .simple-typeahead-list {
+    position: absolute;
+    width: 100%;
+    border: none;
+    max-height: 400px;
+    overflow-y: auto;
+    border-bottom: 0.1rem solid var(--color-border);
+    z-index: 9;
+}
+.simple-typeahead .simple-typeahead-list .simple-typeahead-list-header {
+    background-color: var(--color-background-soft);
+    padding: 0.6rem 1rem;
+    border-bottom: 0.1rem solid var(--color-border);
+    border-left: 0.1rem solid var(--color-border);
+    border-right: 0.1rem solid var(--color-border);
+}
+.simple-typeahead .simple-typeahead-list .simple-typeahead-list-footer {
+    background-color: var(--color-background-soft);
+    padding: 0.6rem 1rem;
+    border-left: 0.1rem solid var(--color-border);
+    border-right: 0.1rem solid var(--color-border);
+}
+.simple-typeahead .simple-typeahead-list .simple-typeahead-list-item {
+    cursor: pointer;
+    background-color: var(--color-background-soft);
+    padding: 0.6rem 1rem;
+    border-bottom: 0.1rem solid var(--color-border);
+    border-left: 0.1rem solid var(--color-border);
+    border-right: 0.1rem solid var(--color-border);
+}
+.simple-typeahead .simple-typeahead-list .simple-typeahead-list-item:last-child {
+    border-bottom: none;
+}
+.simple-typeahead .simple-typeahead-list .simple-typeahead-list-item.simple-typeahead-list-item-active {
+    background-color: var(--color-background-mute);
+}
