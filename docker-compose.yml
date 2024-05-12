@@ -1,0 +1,14 @@
+services:
+  bahn-preisfinder:
+    image: werpat/bahn-preisfinder
+    restart: unless-stopped
+    build: 
+      context: .
+    ports: 
+      - 8080:80      
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "2"
+        tag: "{{.Name}}"
