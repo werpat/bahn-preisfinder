@@ -199,11 +199,11 @@ function setDiscount(traveller, discount) {
   traveller.ermaessigungen[0].klasse = klasse
 }
 
+const production = computed(() => import.meta.env.PROD)
 function debug() {
-  window.cc = cache
-  window.req = request
-  window.loading = loading
-  console.log(isLoadingAny.value)
+  window.debugCache = cache
+  window.debugRequest = request
+  console.log(cache, request)
 }
 </script>
 
@@ -283,9 +283,7 @@ function debug() {
         @refreshRequested="cacheConnectionsOfDay(request.anfrageZeitpunkt.addDays(d))" />
     </div>
 
-    <hr class="m-4" />
-
-    <div class="row">
+    <div class="row mt-4" v-if="!production">
       <div class="col p-2 d-grid">
         <button @click="debug" class="btn btn-primary">Debug</button>
       </div>
